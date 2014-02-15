@@ -1,5 +1,19 @@
 <?php
 
+/* 
+
+Gets the data from the local mysql database, and outputs a json formatted object. 
+
+Schema:
+  table: songs
+    id
+    title
+    lyrics
+    youtube
+    ton
+
+*/
+
 $sql = "SELECT id, title, lyrics, ton, youtube FROM songs ORDER BY title ASC;";
 
 $link = mysql_connect('localhost', 'root', '');
